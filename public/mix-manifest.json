@@ -1,0 +1,17 @@
+{
+    "/js/dependencies/jquery.js": "/js/dependencies/jquery.js",
+    "/js/dependencies/bootstrap.js": "/js/dependencies/bootstrap.js",
+    "/js/dependencies/functions.js": "/js/dependencies/functions.js",
+    "/js/checkout.js": "/js/checkout.js",
+    "/js/contact.js": "/js/contact.js",
+    "/js/debug.js": "/js/debug.js",
+    "/js/listContacts.js": "/js/listContacts.js",
+    "/js/login.js": "/js/login.js",
+    "/js/portifolioUser.js": "/js/portifolioUser.js",
+    "/js/register.js": "/js/register.js",
+    "/js/requests.js": "/js/requests.js",
+    "/js/store.js": "/js/store.js",
+    "/js/teste.js": "/js/teste.js",
+    "/css/style.css": "/css/style.css",
+    "/css/bootstrap.css": "/css/bootstrap.css"
+}
