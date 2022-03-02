@@ -14,6 +14,6 @@ class ArtSeeder extends Seeder
      */
     public function run()
     {
-        Art::factory(6)->create();
+        Art::factory(2)->create();
     }
 }

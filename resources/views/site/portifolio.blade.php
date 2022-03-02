@@ -1,7 +1,8 @@
 @extends('site._template')
 @section('content')
     <div class="container">
-
+        
+        <img src="{{Storage::url('arts/aa.jpg')}}" alt="">
         <h3 class="text-center mt-3">Portifólio</h3>
         <hr>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gy-2">

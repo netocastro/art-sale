@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
         Contact::factory(10)->create();
         Category::factory(6)->create();
-        Art::factory(6)->create();
+        Art::factory(2)->create();
         Order::factory(10)->create();
     }
 }

@@ -3,7 +3,7 @@ var __webpack_exports__ = {};
 /*!*******************************!*\
   !*** ./resources/js/store.js ***!
   \*******************************/
-$(document).ready(function () {
+$(function () {
   $('.delete').on('click', function (e) {
     e.preventDefault();
     var data = $(this).data();

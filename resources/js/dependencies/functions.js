@@ -7,10 +7,9 @@ function validateFields(data, dadosForm){
       $('#success').fadeOut().remove();
 
       if(data.emptyFields){
-            data.emptyFields.forEach(element => {	
-                  
+            data.emptyFields.forEach(element => {
                   $(`[name=${element}]`).addClass('is-invalid');
-                  $(`[name=${element}]`).after(`<div id='error-${element}' class='text-danger'>Campo vazio</div>`);
+                  $(`[name=${element}]`).after(`<div id='error-${element}' class='text-danger'>Campo obrigatório</div>`);
                   $(`#error-${element}`).hide().fadeIn();
             });
       }
@@ -26,15 +25,5 @@ function validateFields(data, dadosForm){
       if(data.success){
             $('button[type=submit]').after(`<h6 id="success" class="bg-success text-light p-2 mt-3 rounded text-center">${data.success}</h6>`).hide().fadeIn();
             $('.form-control').val('');
-      }
-}
-
-function show_image(input) {
-      if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                  $('#preview').attr('src', e.target.result);
-            }
-            reader.readAsDataURL(input.files[0]);
       }
 }

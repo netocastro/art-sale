@@ -20,10 +20,10 @@ class CreateArtsTable extends Migration
             $table->string('name', 50);
             $table->string('directory');
             $table->string('description');
-            $table->tinyInteger('rate')->nullable();
+            $table->tinyInteger('rate')->default(0);
             $table->float('price', 8, 2);
-            $table->float('price_per_person', 8, 2);
-            $table->tinyInteger('discount');
+            $table->float('price_per_person', 8, 2)->default(0);
+            $table->tinyInteger('discount')->default(0);
             $table->boolean('more_person')->default(FALSE);
             $table->timestamps();
         });

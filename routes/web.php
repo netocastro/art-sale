@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\AdminRequestsController;
 use App\Http\Controllers\Site\Requests;
 use App\Http\Controllers\Site\Web;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +24,7 @@ Route::get('/login', [Web::class, 'login'])->name('web.login');
 Route::get('/portifolio', [Web::class, 'portifolio'])->name('web.portifolio');
 Route::get('/registro', [Web::class, 'register'])->name('web.register');
 Route::get('/loja', [Web::class, 'store'])->name('web.store');
-Route::get('/loja/{art}', [Web::class, 'artSell'])->name('web.artSell');
+Route::get('/loja/{artName}', [Web::class, 'artSell'])->name('web.artSell');
 
 /** Requests */
 Route::post('/login', [Requests::class, 'login'])->name('request.login');
@@ -30,8 +32,22 @@ Route::post('/register', [Requests::class, 'register'])->name('request.register'
 Route::post('/contact', [Requests::class, 'contact'])->name('request.contact');
 Route::post('/read', [Requests::class, 'login'])->name('request.read');
 
-/*$router->post("/uploadStore", "Request:uploadStore", "art.request.uploadStore");
-$router->post("/debug", "Request:debug", "art.request.debug");
+/** 
+ * Admin 
+ */
+Route::prefix('admin')->group(function () {
+    /** Web */
+    //Route::get('/lista-contatos', [Admin::class, 'contactList'])->name('admin.contactList');
+   // Route::get('/lista-pedidos', [Admin::class, 'orderList'])->name('admin.orderList');
+    //Route::get('/lista-pedidos', [Admin::class, 'orderList'])->name('admin.orderList');
+    Route::get("/uploadStore", [AdminController::class, 'uploadStore'], "admin.uploadStore");
+
+    /** Request */
+    Route::post("/uploadStore", [AdminRequestsController::class, 'uploadStore'])->name("admin.request.uploadStore");
+});
+
+
+/*$router->post("/debug", "Request:debug", "art.request.debug");
 $router->post("/register", "Request:register", "art.request.register");
 $router->post("/login", "Request:login", "art.request.login");
 $router->post("/contact", "Request:contact", "art.request.contact");
@@ -45,7 +61,4 @@ $router->post("/paymentPayPal", "Request:paymentPayPal", "art.request.paymentPay
 
 
 
-Route::prefix('admin')->group(function () {
-    Route::get('/lista-contatos', [Web::class, 'contactList'])->name('admin.contactList');
-    Route::get('/lista-pedidos', [Web::class, 'orderList'])->name('admin.orderList');
-});
+

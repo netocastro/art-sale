@@ -1,8 +1,4 @@
-/******/ (() => { // webpackBootstrap
-var __webpack_exports__ = {};
-/*!************************************************!*\
-  !*** ./resources/js/dependencies/functions.js ***!
-  \************************************************/
+
 function validateFields(data, dadosForm) {
   $(dadosForm.find('input, select, textarea')).each(function (index) {
     $("".concat($(this).prop('tagName'), "[name=").concat($(this).attr('name'), "]")).removeClass('is-invalid');
@@ -13,7 +9,7 @@ function validateFields(data, dadosForm) {
   if (data.emptyFields) {
     data.emptyFields.forEach(function (element) {
       $("[name=".concat(element, "]")).addClass('is-invalid');
-      $("[name=".concat(element, "]")).after("<div id='error-".concat(element, "' class='text-danger'>Campo vazio</div>"));
+      $("[name=".concat(element, "]")).after("<div id='error-".concat(element, "' class='text-danger'>Campo obrigat\xF3rio</div>"));
       $("#error-".concat(element)).hide().fadeIn();
     });
   }
@@ -32,17 +28,3 @@ function validateFields(data, dadosForm) {
     $('.form-control').val('');
   }
 }
-
-function show_image(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $('#preview').attr('src', e.target.result);
-    };
-
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-/******/ })()
-;

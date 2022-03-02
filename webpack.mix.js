@@ -24,7 +24,8 @@ mix.
     js('resources/js/login.js', 'public/js/login.js').
     js('resources/js/portifolioUser.js', 'public/js/portifolioUser.js').
     js('resources/js/register.js', 'public/js/register.js').
-    js('resources/js/requests.js', 'public/js/requests.js').
+    js('resources/js/orders.js', 'public/js/orders.js').
     js('resources/js/store.js', 'public/js/store.js').
     js('resources/js/teste.js', 'public/js/teste.js').
+    js('resources/js/uploadImages.js', 'public/js/uploadImages.js').
     postCss('resources/css/style.css','public/css/style.css');

@@ -1,8 +1,8 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-/*!**********************************!*\
-  !*** ./resources/js/requests.js ***!
-  \**********************************/
+/*!********************************!*\
+  !*** ./resources/js/orders.js ***!
+  \********************************/
 $(document).ready(function () {
   var sessionId;
   $('#form-description').on('submit', function (e) {

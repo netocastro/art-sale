@@ -10,7 +10,7 @@ function validateFields(data, dadosForm) {
   if (data.emptyFields) {
     data.emptyFields.forEach(function (element) {
       $("[name=".concat(element, "]")).addClass('is-invalid');
-      $("[name=".concat(element, "]")).after("<div id='error-".concat(element, "' class='text-danger'>Campo vazio</div>"));
+      $("[name=".concat(element, "]")).after("<div id='error-".concat(element, "' class='text-danger'>Campo obrigat\xF3rio</div>"));
       $("#error-".concat(element)).hide().fadeIn();
     });
   }
@@ -27,17 +27,5 @@ function validateFields(data, dadosForm) {
   if (data.success) {
     $('button[type=submit]').after("<h6 id=\"success\" class=\"bg-success text-light p-2 mt-3 rounded text-center\">".concat(data.success, "</h6>")).hide().fadeIn();
     $('.form-control').val('');
-  }
-}
-
-function show_image(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
-      $('#preview').attr('src', e.target.result);
-    };
-
-    reader.readAsDataURL(input.files[0]);
   }
 }

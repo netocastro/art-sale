@@ -26,12 +26,12 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $findEmptyFields = array_keys($request->all(), '');
+        $filterEmptyFields = array_keys($request->all(), '');
 
-        $findEmptyFields = array_values(array_diff($findEmptyFields, ["whatsapp"]));
+        $filterEmptyFields = array_values(array_diff($filterEmptyFields, ["whatsapp"]));
 
-        if ($findEmptyFields) {
-            return json_encode((array)['emptyFields' => $findEmptyFields]);
+        if ($filterEmptyFields) {
+            return json_encode((array)['emptyFields' => $filterEmptyFields]);
         }
 
         $validateFields = [];

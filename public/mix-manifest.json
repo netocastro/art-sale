@@ -9,9 +9,10 @@
     "/js/login.js": "/js/login.js",
     "/js/portifolioUser.js": "/js/portifolioUser.js",
     "/js/register.js": "/js/register.js",
-    "/js/requests.js": "/js/requests.js",
+    "/js/orders.js": "/js/orders.js",
     "/js/store.js": "/js/store.js",
     "/js/teste.js": "/js/teste.js",
+    "/js/uploadImages.js": "/js/uploadImages.js",
     "/css/style.css": "/css/style.css",
     "/css/bootstrap.css": "/css/bootstrap.css"
 }
