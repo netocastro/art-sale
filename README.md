@@ -1,2 +1,2 @@
 # art-sale
- Site de vendas de artes feito com laravel
+ Site de vendas de artes feito com laravel atualizado
